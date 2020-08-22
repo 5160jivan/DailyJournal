@@ -1,0 +1,13 @@
+<%- include('partials/header'); -%>
+    <div class="container">
+        <!--[if lt IE 7]>
+            <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="#">upgrade your browser</a> to improve your experience.</p>
+        <![endif]-->
+        <%= bodyContent%>
+        <%for(var i = 0; i <  blogContent.length; i++){ %>
+            <h1><%=blogContent[i].title%></h1>
+            <p><%=blogContent[i].content.slice(0, 100)%> ... <a href="/posts/<%=blogContent[i]._id%>">Read More</a></p>
+        <%}%>
+        <script src="" async defer></script>
+    </div>
+<%- include('partials/footer');-%>
